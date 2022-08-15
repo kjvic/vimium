@@ -1,0 +1,38 @@
+{
+  "settingsVersion": "1.67.1",
+  "exclusionRules": [
+    {
+      "pattern": "https?://mail.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "about:blank*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "docs.google.com*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://console.aws.amazon.com/*",
+      "passKeys": ""
+    }
+  ],
+  "filterLinkHints": false,
+  "waitForEnterForFilteredHints": true,
+  "hideHud": false,
+  "keyMappings": "unmapAll\n\n# Notes on modifier keys and vimium config syntax\n# <c-*> = control key\n# <a-*> = meta key (alt/option)\n# <m-*> = command key (prone to conflicts on macOS => avoid)\n# We do not explicitly write the shift key -- instead, write the \"uppercase\" version of the key\n# e.g. \"Shift + m\" would be written \"M\"\n# In other words, these mappings are case-sensitive\n\nmap <c-n> scrollDown\nmap <c-p> scrollUp\n\nmap <c-b> scrollLeft\nmap <c-f> scrollRight\n\nmap <m-<> scrollToTop\nmap <m->> scrollToBottom\n\nmap <c-x>< scrollToLeft\nmap <c-x>> scrollToRight\n\nmap <c-x>0 removeTab\n\nmap <c-c>L copyCurrentUrl\nmap <c-c>l LinkHints.activateModeToCopyLinkUrl\n\nmap <c-c><c-l> openCopiedUrlInCurrentTab\nmap <c-c><c-L> openCopiedUrlInNewTab\n\nmap <c-c>< goUp\nmap <c-c>/ goToRoot\n\nmap ' LinkHints.activateMode\nmap \" LinkHints.activateModeToOpenInNewTab\n\nmap <c-x><c-f> Vomnibar.activate\n\nmap <c-x>b Vomnibar.activateTabSelection\n\nmap <c-x>l Vomnibar.activateBookmarksInNewTab\n\nmap <c-x>o nextFrame\n\nmap / enterFindMode\nmap n performFind\nmap p performBackwardsFind\n\nmap <c-x>, goBack\nmap <c-x>. goForward\n\nmap <c-x>4 duplicateTab\n\nmap <c-x>5 moveTabToNewWindow\n\n# Use BTT to...\n# remap <m-<> to <m-U>\n# remap <m->> to <m-I>\n# remap <m-,> to <c-<tab>>\n# remap <m-.> to <c-<TAB>> (i.e. command + shift + tab)\n# map <m-,> previousTab\n# map <m-.> nextTab\nmap <m-U> moveTabLeft\nmap <m-I> moveTabRight\n\nmap <c-h> showHelp",
+  "linkHintCharacters": "sadfjklewcmpgh",
+  "linkHintNumbers": "0123456789",
+  "newTabUrl": "about:newtab",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
+  "regexFindMode": false,
+  "ignoreKeyboardLayout": false,
+  "scrollStepSize": 60,
+  "smoothScroll": true,
+  "grabBackFocus": false,
+  "searchEngines": "",
+  "searchUrl": "https://www.google.com/search?q=",
+  "userDefinedLinkHintCss": "/* Adapted from Giorgi Gzirishvili (#giogziro95)'s Arc Dark theme */\n\n/* Linkhint boxes */\ndiv > .vimiumHintMarker {\n  background: #383c4a;\n  font-size: 12px;\n  border: 0.23em solid #383c4a;\n  border-radius: 0.68em;\n  box-shadow: 0em 0.1em 0.6em 0.1em rgba(0, 0, 0, 0.4);\n}\n\n/* Linkhint text */\ndiv > .vimiumHintMarker span {\n  color: #e2e3e7;\n  font-size: inherit;\n  text-shadow: none;\n}\n\n/* Linkhint matching characters */\ndiv > .vimiumHintMarker > .matchingCharacter {\n  color: #5294e2;\n}"
+}
